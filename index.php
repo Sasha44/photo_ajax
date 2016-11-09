@@ -9,7 +9,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     </head>
     <body>
-        <form action="addphoto.php" method="post" enctype="multipart/form-data">
+        <form action="addphoto.php" method="post" enctype="multipart/form-data" id="photo">
             <input type="file" name="photo"/>
             <input type="submit"/>
         </form>  
