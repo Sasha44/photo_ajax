@@ -39,7 +39,7 @@ class PhotoUpload {
     public function addToDB() {
         if ($this->src) {
             $query = "INSERT INTO images (src) values ('{$this->src}')";
-            $dbn = new PDO('mysql:host=localhost;dbname=gallary', 'root', '');
+            $dbn = new PDO('mysql:host=localhost;dbname=gallery', 'root', '');
             $dbn->query($query);
         }
     }
@@ -52,7 +52,7 @@ if ($pu->validate()) {
 }
 //--------------------------------------------------------
 $query = "SELECT*FROM images";
-$dbn = new PDO('mysql:host=localhost;dbname=gallary', 'root', '');
+$dbn = new PDO('mysql:host=localhost;dbname=gallery', 'root', '');
 $images = array();
 foreach ($dbn->query($query) as $row) {
     $images[] = array(
